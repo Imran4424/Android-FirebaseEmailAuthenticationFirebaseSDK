@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".SignedInActivity">
 
+    <TextView
+        android:id="@+id/textNameSigned"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="24dp"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textEmailSigned"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNameSigned" />
+
+    <Button
+        android:id="@+id/buttonSignOutActivity"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Sign Out"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailSigned" />
 </androidx.constraintlayout.widget.ConstraintLayout>
