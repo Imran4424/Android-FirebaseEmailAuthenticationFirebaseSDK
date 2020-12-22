@@ -20,8 +20,4 @@ public class MainActivity extends AppCompatActivity {
     public void listSignIn(View view) {
 
     }
-
-    public void listSignOut(View view) {
-
-    }
 }
