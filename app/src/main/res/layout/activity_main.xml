@@ -10,7 +10,7 @@
         android:id="@+id/textUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:text="No User!"
         android:textAlignment="center"
         android:textSize="36sp"
@@ -62,29 +62,16 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
 
     <Button
-        android:id="@+id/buttonSignOut"
-        android:layout_width="256dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Sign Out"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
-
-    <Button
         android:id="@+id/buttonRemoveUser"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Remove User"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignOut" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
 
     <Button
         android:id="@+id/buttonLinkSIgnIn"
