@@ -30,13 +30,14 @@ public class SignUpActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.editTextPasswordSignUp);
         repeatPassword = (EditText) findViewById(R.id.editTextRePasswordSignUp);
         progressBar = (ProgressBar) findViewById(R.id.progressBarSignUp);
-        
+
         firebaseAuth = FirebaseAuth.getInstance();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        progressBar.setVisibility(View.GONE);
     }
 
     public void registerUser(View view) {
@@ -74,6 +75,8 @@ public class SignUpActivity extends AppCompatActivity {
             showToast("Password is too short");
             return;
         }
+
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     private void showToast(String message) {
