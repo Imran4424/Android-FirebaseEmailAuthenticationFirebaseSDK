@@ -1,6 +1,7 @@
 package com.imran.android.java_firebaseemailauthenticationsdk;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,9 @@ public class SignUpActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.editTextEmailSignUp);
         password = (EditText) findViewById(R.id.editTextPasswordSignUp);
         repeatPassword = (EditText) findViewById(R.id.editTextRePasswordSignUp);
+    }
+
+    public void signUpForm(View view) {
+        
     }
 }
