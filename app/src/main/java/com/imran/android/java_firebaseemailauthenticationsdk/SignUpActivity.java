@@ -29,7 +29,15 @@ public class SignUpActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
     }
 
-    public void signUpForm(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
+    public void registerUser(View view) {
+        String nameInput = name.getText().toString().trim();
+        String emailInput = email.getText().toString().trim();
+        String passwordInput = password.getText().toString().trim();
+        String repeatPasswordInput = repeatPassword.getText().toString().trim();
     }
 }
