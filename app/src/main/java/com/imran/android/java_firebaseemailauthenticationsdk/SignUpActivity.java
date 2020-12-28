@@ -77,6 +77,8 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         progressBar.setVisibility(View.VISIBLE);
+
+        
     }
 
     private void showToast(String message) {
