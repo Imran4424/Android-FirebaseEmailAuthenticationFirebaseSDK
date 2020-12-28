@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void listSignIn(View view) {
-        Intent signInIntent = new Intent(this, SignedInActivity.class);
+        Intent signInIntent = new Intent(this, SignInActivity.class);
         startActivity(signInIntent);
     }
 }
