@@ -7,8 +7,12 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -78,7 +82,15 @@ public class SignUpActivity extends AppCompatActivity {
 
         progressBar.setVisibility(View.VISIBLE);
 
-        
+        // create user
+        firebaseAuth.createUserWithEmailAndPassword(emailInput, passwordInput)
+                .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        showToast("User created with Email");
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
     }
 
     private void showToast(String message) {
