@@ -20,6 +20,6 @@ public class SignedInActivity extends AppCompatActivity {
     }
 
     public void signOutFinal(View view) {
-        
+
     }
 }

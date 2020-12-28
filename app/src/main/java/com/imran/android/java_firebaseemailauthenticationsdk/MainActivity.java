@@ -1,5 +1,6 @@
 package com.imran.android.java_firebaseemailauthenticationsdk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void listSignUp(View view) {
-
+        Intent signUpIntent = new Intent(this, SignUpActivity.class);
+        startActivity(signUpIntent);
     }
 
     public void listSignIn(View view) {
-
+        Intent signInIntent = new Intent(this, SignedInActivity.class);
+        startActivity(signInIntent);
     }
 }
