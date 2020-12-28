@@ -1,7 +1,9 @@
 package com.imran.android.java_firebaseemailauthenticationsdk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -93,6 +95,13 @@ public class SignUpActivity extends AppCompatActivity {
                         // if sign in fails, display a message to the user
                         // if sign in succeeds, the auth state listener will be notified and logic to handle
                         // signed in user can be handled in the listener
+                        if (!task.isSuccessful()) {
+                            showToast("Authentication Failed");
+                            Log.e("Authentication errors", task.getException().toString());
+                        } else {
+                            startActivity(new Intent(SignUpActivity.this, SignedInActivity.class));
+                            finish();
+                        }
                     }
                 });
     }
