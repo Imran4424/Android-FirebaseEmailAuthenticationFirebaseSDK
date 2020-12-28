@@ -24,6 +24,6 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void signUpForm(View view) {
-        
+
     }
 }
