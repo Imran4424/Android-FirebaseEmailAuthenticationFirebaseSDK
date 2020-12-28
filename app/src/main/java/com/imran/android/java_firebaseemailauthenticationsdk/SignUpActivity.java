@@ -89,6 +89,10 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         showToast("User created with Email");
                         progressBar.setVisibility(View.GONE);
+
+                        // if sign in fails, display a message to the user
+                        // if sign in succeeds, the auth state listener will be notified and logic to handle
+                        // signed in user can be handled in the listener
                     }
                 });
     }
