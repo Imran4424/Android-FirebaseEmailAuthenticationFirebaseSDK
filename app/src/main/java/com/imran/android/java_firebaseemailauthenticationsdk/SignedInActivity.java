@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignedInActivity extends AppCompatActivity {
     private TextView name;
@@ -23,6 +24,10 @@ public class SignedInActivity extends AppCompatActivity {
         email = (TextView) findViewById(R.id.textEmailSigned);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        name.setText(currentUser.getDisplayName());
+        email.setText(currentUser.getEmail());
     }
 
     public void signOutFinal(View view) {

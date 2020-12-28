@@ -72,7 +72,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
 
-        if (passwordInput != repeatPasswordInput) {
+        if (!passwordInput.equals(repeatPasswordInput)) {
             showToast("passwords not matched");
             return;
         }
