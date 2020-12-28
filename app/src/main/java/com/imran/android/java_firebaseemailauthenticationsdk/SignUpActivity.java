@@ -25,6 +25,8 @@ public class SignUpActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.editTextEmailSignUp);
         password = (EditText) findViewById(R.id.editTextPasswordSignUp);
         repeatPassword = (EditText) findViewById(R.id.editTextRePasswordSignUp);
+
+        firebaseAuth = FirebaseAuth.getInstance();
     }
 
     public void signUpForm(View view) {
